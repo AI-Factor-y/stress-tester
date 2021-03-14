@@ -28,7 +28,7 @@ ___________
 
 2:optimal.cpp
 
-this is your optimal code . the code that you want to test whether it is write or wrong
+this is your optimal code . the code that you want to test whether it is right or wrong
 
 __________
 3: testgen.py
