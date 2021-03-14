@@ -93,4 +93,4 @@ about this code
 
 this code is written by abhinav p and was meant for personal use. this tool is still under development .
 
-Licensed under apache 
+Licensed under [![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=flat-square)](https://github.com/AI-Factor-y/stress-tester/blob/main/LICENSE) 
