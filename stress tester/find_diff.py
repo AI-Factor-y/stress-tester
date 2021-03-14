@@ -21,13 +21,28 @@ min_i_val=0
 for i in range(len(myfile)):
 	if myfile[i]!=real_op[i]:
 		o=math.ceil((i+1)/opl)
-		print(f"line in output : {(i+1)*opl} | line in input : {(ipl*i)+2}")
+		print(f"\nline in output : {(i+1)*opl} | line in input : {(ipl*i)+2}")
 
 		print("testcase number : ",o)
 		print("----------------------------------")
-		print("input : ",input_file[ipl*(o-1)+1+offset])
-		print("output required : ",real_op[i])
-		print("your output : ",myfile[i])
+		print("input : ")
+
+		for k in range(ipl):
+			print(input_file[ipl*(o-1)+1+k],end="")
+
+		print("")
+
+		print("output required : ")
+
+		for k in range(opl):
+			print(real_op[i+k],end="")
+
+		print("")
+		print("your output : ")
+
+		for k in range(opl):
+			print(myfile[i+k],end="")
+
 		print("___________________________________")
 		flag=False
 
@@ -35,9 +50,7 @@ for i in range(len(myfile)):
 
 		if(len(input_file[ipl*(o-1)+1+offset])<mini_inp):
 			mini_inp=len(input_file[ipl*(o-1)+1+offset])
-			minimInp=input_file[ipl*(o-1)+1+offset]
-			miniOut=real_op[i]
-			miniYour=myfile[i]
+			minimInp=ipl*(o-1)+1
 			min_i_val=i
 
 
@@ -53,9 +66,22 @@ else:
 
 	print("testcase number : ",o)
 	print("----------------------------------")
-	print("input : ",minimInp)
-	print("output required : ",miniOut)
-	print("your output : ",miniYour)
-	print("___________________________________")
+	print("input : ")
 
+	for k in range(ipl):
+		print(input_file[minimInp+k],end="")
+
+	print("")
+	print("output required : ")
+
+	for k in range(opl):
+		print(real_op[min_i_val+k],end="")
+
+	print("")
+	print("your output : ")
+
+	for k in range(opl):
+		print(myfile[min_i_val+k],end="")
+
+	print("___________________________________")
 	os.system("pause")
